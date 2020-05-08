@@ -10,10 +10,6 @@
             <p v-if="chat.parts[0]">{{chat.parts[chat.parts.length -1].text || ''}}</p>
             <p v-else></p>
 
-
-            <!-- <div class="title">{{chat.title}}</div>
-            <div class="time">{{chat.created}}</div>
-            <div class="message">{{chat.parts[0].text}}</div> -->
         </div>
         </router-link>
     </div>
@@ -27,9 +23,6 @@ export default {
             type: Object,
             required: true
         }
-    },
-    computed: {
-        lastElem: () => chat.parts[parts.length -1]
     }
 }
 </script>

@@ -1,7 +1,7 @@
 <template>
     <div class="wrap" >
         
-        <div  class="message" :class="owner">
+        <div  class="message" :class="{'owner': isOwner}">
             <small>
                 <strong>{{part.author}}</strong>
             </small>
@@ -29,7 +29,15 @@ export default {
         }
     },
     computed: {
-        
+        isOwner(part) {
+            if(part.author != "Mario") {
+                return true
+            } else {
+                return false
+            }
+        }
+        //Не удалось реализовать механику изменения класса в зависимости от сообщения. В идеале эти данные должны
+        // приходить с сервера.
     }
     
 }

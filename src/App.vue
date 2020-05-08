@@ -28,7 +28,6 @@ import DialogCard from '@/components/DialogCard'
 export default {
   name: 'App',
   computed: {
-  // mapGetters(['allChats', 'chatsCount']),
     allChats() {
       return this.$store.getters.allChats
     },

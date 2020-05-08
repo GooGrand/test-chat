@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import store from '../../../Task manager/vue-crm/src/store'
+
 
 Vue.use(Vuex)
 

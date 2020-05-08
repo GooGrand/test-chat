@@ -1,21 +1,18 @@
 <template>
     <div class="row">
-    <!-- <div class=""> -->
         <form action="submit" @submit.prevent="sendMessage" >
             <div class="input-field col s10">
                 <input type="text" 
                    id="text"
                    placeholder="Write a message..."
                    v-model="text"
+                   :disabled=loading
                    required>
             </div>
-            <!-- <div :class="{disabled:loading}"> -->
             <button class="btn waves-effect waves-light" type="submit" :disabled=loading >
                 <i class="material-icons">send</i>
             </button>
-            <!-- </div> -->
-        </form>
-    <!-- </div> -->
+        </form> 
 </div>
 </template>
 
@@ -52,7 +49,7 @@ export default {
                         message: {
                             messageId: Date.now(),
                             text: this.text,
-                            author: 'Mario',
+                            author: 'Alex',
                             created: this.dateNow()
                         }
                 })

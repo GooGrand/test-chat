@@ -5,6 +5,8 @@
                 <i class="material-icons">add</i> 
             </router-link>
         </div> -->
+        <!-- Опциональная кнопка для создания новых чатов, не знал куда прикрутить в общем дизайне.
+            Есть возможность перейти на главную -->
         <Loader v-if="loading" />
         <div v-else class="dialog-window">
             <div v-if="chat.parts[0]">
