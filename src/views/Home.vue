@@ -1,18 +1,25 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <CreateChat />
   </div>
 </template>
 
-<script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+// <script>
+import CreateChat from '@/components/CreateChat'
 
 export default {
   name: 'Home',
+  computed: {
+  // mapGetters(['allChats', 'chatsCount']),
+    allChats() {
+      return this.$store.getters.allChats
+    },
+    chatsCount() {
+      return this.$store.getters.chatsCount
+    }
+  },
   components: {
-    HelloWorld
+    CreateChat
   }
 }
 </script>
